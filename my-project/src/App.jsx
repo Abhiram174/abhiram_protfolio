@@ -1,122 +1,148 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+      <nav className="navbar">
+        <h2>Abhirama A Rao</h2>
+
+        <div className="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
+      </nav>
+
+      <header className="hero">
+        <h1>Hi, I'm Abhirama A Rao</h1>
+
+        <h2>Software Developer & Internship Aspirant</h2>
+
+        <p>
+          Passionate about building efficient software solutions and
+          continuously learning new technologies.
+        </p>
+
+        <div className="hero-buttons">
+          <a href="#projects" className="btn">
+            View Projects
+          </a>
+
+          <a href="/resume.pdf" className="btn btn-outline" download>
+            Download Resume
+          </a>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+      </header>
+
+      <section id="about">
+        <h2>About Me</h2>
+
+        <p>
+          Highly motivated software developer with a strong foundation in
+          programming and problem-solving. Passionate about continuous learning
+          and leveraging innovative solutions to tackle complex challenges.
+        </p>
       </section>
 
-      <div className="ticks"></div>
+      <section id="skills">
+        <h2>Skills</h2>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+        <div className="grid">
+          <div className="card">
+            <h3>Programming</h3>
+            <p>Java, C, C++, Python</p>
+          </div>
+
+          <div className="card">
+            <h3>Web Development</h3>
+            <p>HTML, CSS, JavaScript, Node.js, Express.js, SQL</p>
+          </div>
+
+          <div className="card">
+            <h3>Tools</h3>
+            <p>Git, GitHub, VS Code, Eclipse</p>
+          </div>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <div className="grid">
+          <div className="card">
+            <h3>Library Management System</h3>
+
+            <p>
+              Built with HTML, CSS, JavaScript, Node.js, Express.js and MySQL.
+            </p>
+
+            <ul>
+              <li>User Authentication</li>
+              <li>Book Borrowing</li>
+              <li>Book Returning</li>
+              <li>Availability Check</li>
+            </ul>
+          </div>
+
+          <div className="card">
+            <h3>Smart Pet Feeding App</h3>
+
+            <p>
+              Android application integrated with Firebase Realtime Database.
+            </p>
+
+            <ul>
+              <li>Remote Feeding</li>
+              <li>Live Updates</li>
+              <li>Realtime Commands</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+
+        <div className="card">
+          <h3>Nitte University</h3>
+          <p>B.Tech Computer & Communication</p>
+          <p>2023 - 2027</p>
+          <p>CGPA: 6.73</p>
+        </div>
+
+        <div className="card">
+          <h3>Vidyodaya PU College</h3>
+          <p>PCM</p>
+          <p>Percentage: 90.33%</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Certification</h2>
+
+        <div className="card">
+          <h3>Web Development Course - Udemy</h3>
+          <p>HTML, CSS, JavaScript, Node.js, APIs and Deployment</p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+
+        <div className="card">
+          <p>Email: abhiramaarao@gmail.com</p>
+          <p>Phone: +91 9036736927</p>
+          <p>Location: Udupi, Karnataka</p>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2026 Abhirama A Rao</p>
+      </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
